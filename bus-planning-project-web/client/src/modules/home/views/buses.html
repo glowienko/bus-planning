@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 home-content">
+            <div class="jumbotron text-center">
+                <h2>Autobusy o wymaganym standardzie</h2>
+            </div>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 home-content">
+            <h2> Wybierz jeden z autobusów, aby kontuuować tworzenie kursu</h2>
+            <div ng-repeat="bus in buses" ng-click="selectBus(bus)">
+                <div class="subpage-content-div profileOverview">
+                    <p>Numer autokaru: {{bus.id}}</p>
+                    <p>Liczba miejsc: {{bus.capacity}}</p>
+                    <p> Numer standardu: {{bus.busStandardId}} </p>
+                </div>
+                <br><br>
+            </div>
+            <h3>Wybrany autokar o numerze : {{selectedBus}} </h3>
+
+            <div class="next-button-wrapper">
+                <button type="button" class="btn btn-success btn-lg" ng-click="goToEmployeesSelection()">Next</button>
+                <button type="button" class="btn btn-success btn-lg" ng-click="back()">Back</button>
+            </div>
+        </div>
+        <div class="col-xs-1 col-xs-1 col-xs-1 col-xs-1">
+        </div>
+    </div>
+
+
+
+
+</div>

@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 home-content">
+            <div class="jumbotron text-center">
+                <h2>Rozkłady jazdy dla trasy o id : {{routeId}}</h2>
+            </div>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 home-content">
+            <h2> Wybierz jeden z rozkładów, aby kontuuować tworzenie kursu</h2>
+            <div ng-repeat="timetable in timetables" ng-click="selectTimetable(timetable)">
+                <div class="subpage-content-div profileOverview">
+                    <p>Rozkład numer: {{timetable.id}}</p>
+                    <p>Dzień i godzina wyjazdu: <span class="level-badge">{{timetable.dayOfTheWeek}},  {{timetable.departureHour}}</span>                        </p>
+                    <p>Na trasie: <span class="points-badge">{{busStopsOnRoute[routeId]}}</span> </p>
+                </div>
+                <br><br>
+            </div>
+            <h3>Wybrany rozkład jazdy : {{selectedTimetable}} </h3>
+            <h3>Wymaga autokaru o standardzie : {{selectedBusStandard}} </h3>
+            <div class="next-button-wrapper">
+                <button type="button" class="btn btn-success btn-lg" ng-click="goToBusSelection()">Next</button>
+                <button type="button" class="btn btn-success btn-lg" ng-click="back()">Back</button>
+            </div>
+        </div>
+        <div class="col-xs-1 col-xs-1 col-xs-1 col-xs-1">
+        </div>
+    </div>
+
+
+
+
+</div>

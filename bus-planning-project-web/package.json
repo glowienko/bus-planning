@@ -1,0 +1,11 @@
+{
+  "name": "wbd-project-sql-bus-line",
+  "version": "0.0.1",
+  "description": "web-service-for-sql-db-wbd",
+  "main": "server.js",
+  "author": "Patryk",
+  "dependencies": {
+    "express": "4.13.4",
+    "serve-static": "1.11.1"
+  }
+}

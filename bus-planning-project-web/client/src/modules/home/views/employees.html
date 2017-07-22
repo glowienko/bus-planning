@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 home-content">
+            <div class="jumbotron text-center">
+                <h2>Dodaj pracowników na kurs</h2>
+            </div>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 home-content">
+            <h2> Wybierz 3 pracowników, aby zakończyć tworzenie kursu</h2>
+            <div ng-repeat="employee in employees" ng-click="addEmployee(employee)">
+                <div class="subpage-content-div profileOverview">
+                    <p>Imię: {{employee.name}}</p>
+                    <p>Nazwisko: {{employee.surname}}</p>
+                    <p> zawód: {{employee.profession}} </p>
+                </div>
+                <br><br>
+            </div>
+            <h3>Wybrano pracowników : {{selectedEmployees}} </h3>
+
+            <div class="next-button-wrapper">
+                <button type="button" class="btn btn-success btn-lg" ng-click="createRide()">Create !</button>
+                <button type="button" class="btn btn-success btn-lg" ng-click="back()">Back</button>
+            </div>
+        </div>
+        <div class="col-xs-1 col-xs-1 col-xs-1 col-xs-1">
+        </div>
+    </div>
+
+
+
+
+</div>

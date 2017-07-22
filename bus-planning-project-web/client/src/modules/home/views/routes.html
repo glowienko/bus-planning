@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 home-content">
+            <div class="jumbotron text-center">
+                <h2>Wybór trasy dla tworzonego kursu</h2>
+            </div>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 home-content">
+            <h3> Wybierz jedną trasę, aby kontuuować tworzenie kursu</h3>
+            <div ng-repeat="route in routes" ng-click="selectRoute(route)">
+
+                <div class="subpage-content-div profileOverview">
+                    <p>Numer Trasy: {{route.id}}</p>
+                    <p>Trasa z przystankami:
+                        <span class="points-badge">{{busStopsOnRoute[route.id]}}</span> </p>
+                </div>
+                <br><br>
+            </div>
+
+            <h3>Selected route : {{selectedRoute}} </h3>
+            <div class="next-button-wrapper">
+                <button type="button" class="btn btn-success btn-lg" ng-click="goToTimetablesSelection()">Next</button>
+            </div>
+        </div>
+        <div class="col-xs-1 col-xs-1 col-xs-1 col-xs-1">
+        </div>
+    </div>
+
+
+
+
+</div>
